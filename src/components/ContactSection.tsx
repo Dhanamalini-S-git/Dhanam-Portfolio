@@ -5,21 +5,53 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+const EMAILJS_SERVICE_ID = "service_4re4e8t";
+const EMAILJS_TEMPLATE_ID = "template_b6230l7";
+const EMAILJS_PUBLIC_KEY = "ZVGF_L9sh8Nyiw5pK";
+
 const ContactSection = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setLoading(true);
+
+    try {
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+          },
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent! ✅",
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error("Failed");
+      }
+    } catch {
+      toast({
+        title: "Error ❌",
+        description: "Something went wrong. Please try again or email directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -67,7 +99,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium">Virudhunagar,Tamilnadu</p>
+                  <p className="font-medium">Virudhunagar, Tamilnadu</p>
                 </div>
               </div>
             </div>
@@ -79,9 +111,7 @@ const ContactSection = () => {
                 <Input
                   placeholder="Your Name"
                   value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
                   className="bg-card border-border focus:border-primary"
                 />
@@ -91,9 +121,7 @@ const ContactSection = () => {
                   type="email"
                   placeholder="Your Email"
                   value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
                   className="bg-card border-border focus:border-primary"
                 />
@@ -103,16 +131,14 @@ const ContactSection = () => {
                   placeholder="Your Message"
                   rows={5}
                   value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
                   className="bg-card border-border focus:border-primary resize-none"
                 />
               </div>
-              <Button type="submit" size="lg" className="w-full font-semibold">
+              <Button type="submit" size="lg" className="w-full font-semibold" disabled={loading}>
                 <Send size={18} className="mr-2" />
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
