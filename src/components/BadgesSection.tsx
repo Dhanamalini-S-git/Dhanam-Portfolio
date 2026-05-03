@@ -24,12 +24,6 @@ const certBadges = [
     link: "#",
   },
   {
-    title: "Data Analytics Essentials",
-    issuer: "Cisco",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&auto=format&fit=crop",
-    link: "#",
-  },
-  {
     title: "Python for Data Science",
     issuer: "IBM SkillsBuild",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&auto=format&fit=crop",
