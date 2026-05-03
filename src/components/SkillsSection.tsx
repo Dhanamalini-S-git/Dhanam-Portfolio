@@ -9,7 +9,7 @@ const skills = [
   { name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
   { name: "Excel", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" },
   { name: "Java", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-  { name: "n8n Automation", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" },
+  { name: "n8n Automation", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRysoq8jp1TbDgmw8aLRespf2aS-MPpclGObw&s" },
   { name: "Web Scraping", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
   { name: "Canva", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" },
 ];
