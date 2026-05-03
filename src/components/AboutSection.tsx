@@ -85,6 +85,10 @@ const AboutSection = () => {
               <Layout className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
               <h3 className="font-semibold group-hover:text-primary-foreground transition-colors"> Designing </h3>
             </div>
+            <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
+              <Database className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
+              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">Web Scrapping </h3>
+            </div>
           </div>
         </div>
       </div>
