@@ -3,12 +3,15 @@ const skills = [
   { name: "Node.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
   { name: "MongoDB", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
   { name: "JavaScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "Git & Github", image: "https://tse1.explicit.bing.net/th/id/OIP._c0EZbkgQU8uTRZYeIALWgHaHa?w=512&h=512&rs=1&pid=ImgDetMain&o=7&rm=3" },
+  { name: "Git & Github", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
   { name: "Python", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "PowerBI", image: "https://logos-world.net/wp-content/uploads/2022/02/Microsoft-Power-BI-Symbol.png" },
+  { name: "PowerBI", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg" },
   { name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name: "Excel", image: "https://i1.wp.com/www.ardilu.com/wp-content/uploads/2020/06/Microsoft-Excel.png?ssl=1" },
+  { name: "Excel", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" },
   { name: "Java", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "n8n Automation", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" },
+  { name: "Web Scraping", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "Canva", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" },
 ];
 
 const SkillsSection = () => {
@@ -36,6 +39,9 @@ const SkillsSection = () => {
                     src={skill.image}
                     alt={skill.name}
                     className="relative w-14 h-14 object-contain group-hover:scale-110 transition-transform"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg";
+                    }}
                   />
                 </div>
                 <h3 className="font-medium text-sm text-center text-foreground group-hover:text-primary transition-colors">
