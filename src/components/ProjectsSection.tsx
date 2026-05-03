@@ -7,17 +7,17 @@ const projects = [
     description:
       "A smart donating platform that connects donors and acceptors seamlessly. Built with a full-stack approach to enable real-time donation tracking and management.",
     image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&auto=format&fit=crop",
-    technologies: ["MongoDB", "Node.js", "JavaScript", "React"],
+    technologies: ["MongoDB", "Node.js", "JavaScript", "React","Html","css"],
     github: "https://github.com/Dhanamalini-S-git",
-    live: "#",
+    live: "https://donify-frontend.vercel.app/",
   },
   {
     title: "College Attendance Monitoring",
     description:
       "Automated attendance monitoring system using BLE Beacon Module for real-time student tracking in college premises.",
     image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&auto=format&fit=crop",
-    technologies: ["Java", "SQL", "Springboot", "Excel"],
-    github: "https://github.com/Dhanamalini-S-git",
+    technologies: ["Java", "SQL", "Springboot", "Excel" ],
+    github: "https://github.com/barath2901/BLE-Beacon-Tracking-Project.git",
     live: "#",
   },
   {
@@ -25,16 +25,25 @@ const projects = [
     description:
       "A Python-based web scraping tool that extracts, processes, and structures data from websites for analysis and reporting.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop",
-    technologies: ["Python", "BeautifulSoup", "Pandas", "Requests"],
+    technologies: ["Python", "BeautifulSoup", "Pandas", "Requests",],
     github: "https://github.com/Dhanamalini-S-git",
     live: "#",
+  },
+  {
+    title: "Smart Parking Management",
+    description:
+      "One app to find, book, track, and auto-pay parking across every mall, festival, and venue — no venue-specific app needed.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRepUVLPdD47fD_vVYO0w4PeJVG4R9T5Lwj_w&s",
+    technologies: ["MongoDB", "Node.js", "JavaScript", "React","Html","css"],
+    github: "https://github.com/Dhanamalini-S-git",
+    live: "https://parkingprofrontend.vercel.app/",
   },
   {
     title: "Connexa",
     description:
       "A healthcare-based website that connects patients with doctors and medical services, enabling seamless appointment booking and health record management.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop",
-    technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+    technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS" ,"Html","Css","figma"],
     github: "https://github.com/Dhanamalini-S-git",
     live: "#",
   },
