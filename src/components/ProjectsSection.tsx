@@ -1,31 +1,41 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import project1 from "@/assets/tic tac.avif";
-import project2 from "@/assets/ai.webp";
-import project3 from "@/assets/sales-dashboard_10.webp";
 
 const projects = [
   {
-    title: "Tic Tac Toe Game",
-    description: "A simple Tic Tac Toe game with interactive UI and multiplayer logic.",
-    image: project1,
-    technologies: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Dhanamalini-S-git/Tictactoe_game.git",
-  },
-  {
-    title: "Cognifyz Java Development Project",
-    description: "Building robust, scalable, and efficient applications with clean code and modern practices.",
-    image: project2,
-    technologies: ["Java", "Core Java", "Advance Java"],
-    github: "https://github.com/Dhanamalini-S-git/Cognifyz-Java-Development-Project.git",
+    title: "Donify",
+    description:
+      "A smart donating platform that connects donors and acceptors seamlessly. Built with a full-stack approach to enable real-time donation tracking and management.",
+    image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&auto=format&fit=crop",
+    technologies: ["MongoDB", "Node.js", "JavaScript", "React"],
+    github: "https://github.com/Dhanamalini-S-git",
     live: "#",
   },
   {
-    title: "Sales Prediction Model",
-    description: "Predictive model for analyzing sales trends and forecasting future performance.",
-    image: project3,
-    technologies: ["Machine Learning", "Seaborn", "PowerBI", "Excel"],
-    github: "https://github.com/Dhanamalini-S-git/Sales-Prediction-project.git",
+    title: "College Attendance Monitoring",
+    description:
+      "Automated attendance monitoring system using BLE Beacon Module for real-time student tracking in college premises.",
+    image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&auto=format&fit=crop",
+    technologies: ["Java", "SQL", "Springboot", "Excel"],
+    github: "https://github.com/Dhanamalini-S-git",
+    live: "#",
+  },
+  {
+    title: "Web Scraping ",
+    description:
+      "A Python-based web scraping tool that extracts, processes, and structures data from websites for analysis and reporting.",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop",
+    technologies: ["Python", "BeautifulSoup", "Pandas", "Requests"],
+    github: "https://github.com/Dhanamalini-S-git",
+    live: "#",
+  },
+  {
+    title: "Connexa",
+    description:
+      "A healthcare-based website that connects patients with doctors and medical services, enabling seamless appointment booking and health record management.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop",
+    technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/Dhanamalini-S-git",
     live: "#",
   },
 ];
@@ -45,7 +55,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[400px] bg-secondary rounded-xl overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+              className="group w-full md:w-[calc(50%-1rem)] lg:w-[calc(50%-1.5rem)] max-w-[500px] bg-secondary rounded-xl overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -72,12 +82,7 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1"
-                    asChild
-                  >
+                  <Button variant="outline" size="sm" className="flex-1" asChild>
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Github size={16} className="mr-2" />
                       Code
