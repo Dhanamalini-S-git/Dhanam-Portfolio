@@ -1,4 +1,4 @@
-import { Code, Database, Layout, Server, Github, Linkedin } from "lucide-react";
+import { Code, Database, Layout, Server, Github, Linkedin, Briefcase } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -12,14 +12,22 @@ const AboutSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <p className="text-muted-foreground text-lg text-center mb-8 leading-relaxed">
-           I’m a B.E. Computer Science student with a strong interest in full stack development and a growing focus on building real-world applications using Java and the MERN stack. I enjoy understanding how things work—both on the frontend and backend—and turning ideas into functional, user-friendly solutions.
-
-Over time, I’ve been developing skills in Java, JavaScript, React, Node.js, HTML, CSS, and basic backend APIs. I like exploring how different parts of a web application connect, and I’m constantly improving my problem-solving and clean-code practices.
-
-I’m actively looking for opportunities—internships, projects, and collaborations—where I can learn from experienced developers, contribute to meaningful work, and grow into a strong full stack developer.
-
+          <p className="text-muted-foreground text-lg text-center mb-6 leading-relaxed">
+            I'm a B.E. Computer Science student with a strong interest in full stack development and a growing focus on building real-world applications using Java and the MERN stack. I enjoy understanding how things work—both on the frontend and backend—and turning ideas into functional, user-friendly solutions.
           </p>
+          <p className="text-muted-foreground text-lg text-center mb-6 leading-relaxed">
+            Over time, I've been developing skills in Java, JavaScript, React, Node.js, HTML, CSS, and basic backend APIs. I like exploring how different parts of a web application connect, and I'm constantly improving my problem-solving and clean-code practices.
+          </p>
+
+          {/* Freelancing Highlight */}
+          <div className="flex items-start gap-4 bg-primary/10 border border-primary/30 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
+            <Briefcase className="text-primary mt-1 shrink-0" size={24} />
+            <div>
+              <p className="text-foreground text-base leading-relaxed">
+                <span className="font-bold text-primary">Available for Freelancing!</span> I take on freelance projects including web development, data analytics dashboards, automation workflows, and UI/UX design. If you have a project in mind, feel free to reach out — let's build something great together!
+              </p>
+            </div>
+          </div>
 
           {/* Social Links */}
           <div className="flex justify-center gap-4 mb-12">
@@ -43,7 +51,7 @@ I’m actively looking for opportunities—internships, projects, and collaborat
             </a>
           </div>
 
-          {/* Services Heading */}
+          {/* Services */}
           <h3 className="text-2xl font-bold font-display text-center mb-8">
             My <span className="text-primary">Services</span>
           </h3>
@@ -51,27 +59,19 @@ I’m actively looking for opportunities—internships, projects, and collaborat
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
               <Code className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
-              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">
-                Mern Stack Development
-              </h3>
+              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">Mern Stack Development</h3>
             </div>
             <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
               <Server className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
-              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">
-               UI&UX Design
-              </h3>
+              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">UI&UX Design</h3>
             </div>
             <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
               <Database className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
-              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">
-                Data Analytics
-              </h3>
+              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">Data Analytics</h3>
             </div>
             <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
               <Layout className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
-              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">
-               Java Development
-              </h3>
+              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">Java Development</h3>
             </div>
           </div>
         </div>
