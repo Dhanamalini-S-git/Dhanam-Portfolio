@@ -58,8 +58,12 @@ const AboutSection = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
+              <Layout className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
+              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors"> Freelancing </h3>
+            </div>
+            <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
               <Code className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
-              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">Mern Stack Development</h3>
+              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">FullStack Development</h3>
             </div>
             <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
               <Server className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
@@ -72,6 +76,14 @@ const AboutSection = () => {
             <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
               <Layout className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
               <h3 className="font-semibold group-hover:text-primary-foreground transition-colors">Java Development</h3>
+            </div>
+            <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
+              <Layout className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
+              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors"> n8n automation </h3>
+            </div>
+            <div className="bg-secondary p-6 rounded-lg text-center group hover:bg-primary transition-all duration-300">
+              <Layout className="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-primary-foreground transition-colors" />
+              <h3 className="font-semibold group-hover:text-primary-foreground transition-colors"> Designing </h3>
             </div>
           </div>
         </div>
