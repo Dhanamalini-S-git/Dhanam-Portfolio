@@ -2,13 +2,6 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const internships = [
   {
-    title: "Data Analytics Intern",
-    company: "Reccsar Pvt. Ltd. ",
-    period: "Jan 2025 - Feb 2025",
-    description:
-      "Internship in Data Analytics – Assisted in collecting, cleaning, and analyzing datasets to identify business insights. Collaborated with the team to create dashboards and reports that improved decision-making efficiency",
-  },
-  {
     title: "Full Stack Developer Intern",
     company: "Itech Academy",
     period: " Feb 2025",
@@ -21,6 +14,20 @@ const internships = [
     period: "June 2025 - July 2025",
     description:
       "Processed datasets with Python and SQL to create visual insights for mobile app decisions..",
+  },
+  {
+    title: "Campus Ambassador",
+    company: "Geeks for Geeks",
+    period: "19th Jan 2026 - Present (6 Months)",
+    description:
+      "Representing GeeksforGeeks on campus by promoting coding culture, organizing technical events, and encouraging students to participate in competitive programming and skill-building activities.",
+  },
+  {
+    title: "FullStack AI Intern",
+    company: "ZelidTech",
+    period: "26 Jan 2026 - 4 Apr 2026",
+    description:
+      "Worked on full-stack AI-powered web applications, integrating machine learning models with modern frontend and backend technologies to deliver intelligent user experiences.",
   },
 ];
 
