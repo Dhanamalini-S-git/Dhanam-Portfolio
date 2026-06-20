@@ -1,32 +1,37 @@
+import ragBadge from "@/assets/rag-badge.png";
+import ociDeveloperBadge from "@/assets/oci-developer-badge.png";
+import ociDeveloper1Badge from "@/assets/oci-developer1-badge.png";
+import genAiBadge from "@/assets/genai-badge.png";
+
 const certBadges = [
   {
     title: "Introduction to RAG",
     issuer: "IBM SkillsBuild",
-    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=300&auto=format&fit=crop",
+    image: ragBadge,
     link: "#",
   },
   {
     title: "OCI Developer Professional",
     issuer: "Oracle",
-    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&auto=format&fit=crop",
+    image: ociDeveloperBadge,
     link: "#",
   },
   {
     title: "Generative AI Fundamentals",
     issuer: "IBM SkillsBuild",
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=300&auto=format&fit=crop",
+    image: genAiBadge,
     link: "#",
   },
   {
     title: "OCI AI Foundations Associate",
     issuer: "Oracle",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&auto=format&fit=crop",
+    image: ociDeveloper1Badge,
     link: "#",
   },
   {
     title: "Python for Data Science",
     issuer: "IBM SkillsBuild",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&auto=format&fit=crop",
+    image: genAiBadge,
     link: "#",
   },
 ];
