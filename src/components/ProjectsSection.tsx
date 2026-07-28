@@ -9,7 +9,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&auto=format&fit=crop",
     technologies: ["MongoDB", "Node.js", "JavaScript", "React","Html","css"],
     github: "https://github.com/Dhanamalini-S-git",
-    live: "donify-jet.vercel.app",
+    live: "https://donify-jet.vercel.app/login",
   },
   {
     title: "College Attendance Monitoring",
