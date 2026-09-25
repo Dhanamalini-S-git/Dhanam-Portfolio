@@ -82,37 +82,22 @@ const PortfolioBot = () => {
     setLoading(true);
 
     try {
-      // Build conversation history for Gemini (skip the first greeting)
-      const history = messages.slice(1).map((m) => ({
-        role: m.role === "assistant" ? "model" : "user",
-        parts: [{ text: m.content }],
-      }));
+      const response = await fetch("https://dhanam-s-bot.onrender.com/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: userMessage.content,
+        }),
+      });
 
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            systemInstruction: {
-              parts: [{ text: SYSTEM_PROMPT }],
-            },
-            contents: [
-              ...history,
-              { role: "user", parts: [{ text: userMessage.content }] },
-            ],
-            generationConfig: {
-              maxOutputTokens: 500,
-              temperature: 0.7,
-            },
-          }),
-        }
-      );
+      if (!response.ok) {
+        throw new Error("Failed to get response from backend");
+      }
 
       const data = await response.json();
-      const reply =
-        data.candidates?.[0]?.content?.parts?.[0]?.text ||
-        "Sorry, I couldn't process that. Please try again!";
+      const reply = data.reply || "Sorry, I couldn't process that. Please try again!";
 
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch {

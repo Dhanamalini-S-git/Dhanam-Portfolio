@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { X } from "lucide-react";
+import { useState, useRef } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Certificate Images
 import certificateOracle from "@/assets/oracle.jpeg";
@@ -44,6 +44,15 @@ const CertificatesSection = () => {
     image: string;
   } | null>(null);
 
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = direction === "left" ? -350 : 350;
+      scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="certificates" className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -55,34 +64,58 @@ const CertificatesSection = () => {
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
-        {/* Certificates Grid */}
-        <div className="flex flex-wrap justify-center gap-6">
-          {certificates.map((cert, index) => (
-            <div
-              key={index}
-              onClick={() => setSelectedCert(cert)}
-              className="group relative w-[280px] md:w-[320px] bg-card rounded-xl overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/10 cursor-pointer"
-            >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
+        {/* Certificates Carousel */}
+        <div className="relative w-full mx-auto group/carousel">
+          {/* Left Arrow */}
+          <button
+            onClick={() => scroll("left")}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-secondary/90 border border-border hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-xl opacity-0 group-hover/carousel:opacity-100 hidden sm:flex"
+            aria-label="Previous certificates"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
 
-              <div className="p-4">
-                <h3 className="font-semibold text-center text-foreground group-hover:text-primary transition-colors">
-                  {cert.title}
-                </h3>
-                <p className="text-sm text-muted-foreground text-center mt-1">
-                  {cert.organization}
-                </p>
-              </div>
+          <div
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory hide-scrollbar"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {certificates.map((cert, index) => (
+              <div
+                key={index}
+                onClick={() => setSelectedCert(cert)}
+                className="group relative w-[280px] md:w-[320px] shrink-0 snap-center bg-card rounded-xl overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20 cursor-pointer"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-            </div>
-          ))}
+                <div className="p-4">
+                  <h3 className="font-semibold text-center text-foreground group-hover:text-primary transition-colors">
+                    {cert.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground text-center mt-1">
+                    {cert.organization}
+                  </p>
+                </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => scroll("right")}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-secondary/90 border border-border hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-xl opacity-0 group-hover/carousel:opacity-100 hidden sm:flex"
+            aria-label="Next certificates"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
         </div>
       </div>
 

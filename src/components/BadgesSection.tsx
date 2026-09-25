@@ -28,12 +28,6 @@ const certBadges = [
     image: ociDeveloper1Badge,
     link: "#",
   },
-  {
-    title: "Python for Data Science",
-    issuer: "IBM SkillsBuild",
-    image: genAiBadge,
-    link: "#",
-  },
 ];
 
 const BadgesSection = () => {

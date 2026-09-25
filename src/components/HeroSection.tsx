@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content */}
-          <div className="flex-1 text-center lg:text-left animate-fade-in">
+          <div className="flex-1 text-center lg:text-left animate-fade-in lg:pl-8 xl:pl-16">
             <p className="text-primary font-medium mb-4 tracking-wider uppercase glow-text font-sans">
               Welcome to my portfolio
             </p>
@@ -94,7 +94,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Profile Picture with Animated Rings */}
-          <div className="flex-1 flex justify-center lg:justify-end">
+          <div className="flex-1 flex justify-center lg:justify-end lg:pr-12 xl:pr-24">
             <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
               {/* First Ring */}
               <div className="absolute w-full h-full rounded-full border-4 border-primary/40 animate-spin-slow"></div>
