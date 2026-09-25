@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
-import profileImage from "@/assets/dhanoo.png";
+
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -26,7 +26,7 @@ const HeroSection = () => {
               I'm <span className="text-gradient">DHANAMALINI S</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-sans">
-               FullStack Developer | Data Analyst | Java Developer | UI & UX Designer | n8n automater | Freelancer
+              FullStack Developer | Data Analyst | Java Developer | UI & UX Designer | n8n automater | Freelancer
             </h2>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed font-sans">
               I'm a passionate developer with a keen eye for design and a love for creating
@@ -59,7 +59,7 @@ const HeroSection = () => {
                 className="font-semibold"
                 asChild
               >
-                <a href="/Dhanamalini S Resume.pdf" download>
+                <a href="/Dhanamalini S  (1) (1).pdf" download>
                   <Download className="mr-2 h-5 w-5" />
                   DOWNLOAD CV
                 </a>
@@ -109,7 +109,7 @@ const HeroSection = () => {
                 className="relative z-10 block"
               >
                 <img
-                  src={profileImage}
+                  src="/dhanamalini.png"
                   alt="Profile"
                   className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-4 border-primary/30 
                              transition-transform duration-300 hover:scale-105 hover:border-primary cursor-pointer glow-border"

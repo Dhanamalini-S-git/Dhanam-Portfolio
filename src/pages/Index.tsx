@@ -9,6 +9,7 @@ import BadgesSection from "@/components/BadgesSection"; // already imported
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import PortfolioBot from "@/components/PortfolioBot";
 
 const Index = () => {
   return (
@@ -24,10 +25,11 @@ const Index = () => {
 
       {/* ✅ BADGES SECTION */}
       <BadgesSection />
-
+      
       <ProjectsSection />
       <ContactSection />
       <Footer />
+      <PortfolioBot />
     </div>
   );
 };
