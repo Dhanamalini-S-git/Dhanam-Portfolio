@@ -24,7 +24,7 @@ const projects = [
     title: "Odiss",
     description:
       "A modern web application for travel and trips management, providing a seamless user experience for exploring and booking travel services.",
-    image: "/public/odiss.png",
+    image: "/odiss.png",
     technologies: ["React", "JavaScript", "HTML", "CSS"],
     github: "https://github.com/arunraja-web/odiss.git",
     live: "https://www.odisstrips.com",
